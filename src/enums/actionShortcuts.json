@@ -1,0 +1,52 @@
+{
+    "49": {
+        "fn": "Normal Block",
+        "type": "block",
+        "value": "NORMAL"
+    },
+    "50": {
+        "fn": "Title Block",
+        "type": "block",
+        "value": "TITLE"
+    },
+    "51": {
+        "fn": "Code Block",
+        "type": "block",
+        "value": "CODE"
+    },
+    "52": {
+        "fn": "Observation Block",
+        "type": "block",
+        "value": "OBSERVATION"
+    },
+    "53": {
+        "fn": "Quote Block",
+        "type": "block",
+        "value": "QUOTE"
+    },
+    "66": {
+        "fn": "Bold Selection",
+        "type": "inline",
+        "value": "BOLD"
+    },
+    "73": {
+        "fn": "Italic Selection",
+        "type": "inline",
+        "value": "ITALIC"
+    },
+    "81": {
+        "fn": "Strikethrough Selection",
+        "type": "inline",
+        "value": "STRIKETHROUGH"
+    },
+    "72": {
+        "fn": "Highlight Selection",
+        "type": "inline",
+        "value": "HIGHLIGHT"
+    },
+    "85": {
+        "fn": "Underline Selection",
+        "type": "inline",
+        "value": "UNDERLINE"
+    }
+}

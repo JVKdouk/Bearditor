@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$button-width: 30px;
+$button-padding: 4px;
+
+.full-wrapper {
+    height: 100%;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
+
+    .editor-toolbar {
+        width: calc(100% - 20px);
+        overflow-y: unset;
+        background-color: #fff;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        height: 48px;
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        position: relative;
+        cursor: default;
+
+        button.editor-button {
+            background-color: transparent;
+            color: #000;
+            padding: 0;
+            box-shadow: none;
+            margin: 0 5px;
+            font-size: 20px;
+            height: 23px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: $button-width;
+            border: 0;
+        }
+
+        select.editor-select {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 4px 25px 4px 3px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        button.selected {
+            border: 2px solid #000;
+            padding: 3px;
+            height: 29px;
+            width: calc(#{$button-width} - (#{$button-padding} * 2));
+        }
+    }
+
+    div.DraftEditor-root {
+        width: calc(100% - 40px);
+        margin: auto;
+        height: calc(100% - 48px);
+        padding: 20px;
+        font-size: 18px;
+        font-family: 'calibri', sans-serif;
+
+        .DraftEditor-editorContainer {
+            height: calc(100% - 22px);
+            text-align: center;
+
+            img {
+                width: 60%;
+                display: block;
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 20px;
+            }
+        }
+
+        .title-style {
+            font-size: 30px;
+            color: #222;
+            font-weight: 600;
+            margin: 0 auto;
+            padding-top: 20px;
+            display: block;
+        }
+
+        .normal-style {
+            font-size: 18px;
+            line-height: 27px;
+            margin: 10px auto 10px;
+            display: block;
+        }
+
+        .code-style {
+            font-size: 18px;
+            line-height: 27px;
+            margin: 10px 0 10px;
+            display: block;
+            background-color: #eee;
+            border: 2px solid #aaa;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 5px;
+        }
+
+        .quote-style {
+            width: 50%;
+            text-align: center;
+            color: #666;
+            font-size: 25px;
+            font-family: 'Bitter', serif;
+            line-height: 38px;
+            font-style: italic;
+        }
+
+        .observation-style {
+            border-left: 3px solid #01a3a4;
+            padding: 10px 20px;
+            text-align: left;
+            width: 50%;
+            font-size: 16px;
+            line-height: 20px;
+
+            span {
+                display: block;
+                text-align: justify;
+                font-style: italic;
+            }
+        }
+    }
+
+
+    .editor-wrapper {
+        cursor: pointer;
+        overflow-y: scroll;
+        height: calc(100% - 48px);
+
+        @media (max-width: 673px) {
+
+            &.center {
+                .DraftEditor-root {
+                    width: calc(100% - 40px) !important;
+                }   
+            }
+        }
+
+        &.center {
+            width: 100%;
+            margin: 0 auto;
+
+            .DraftEditor-root {
+                width: 60%;
+            }
+
+            .public-DraftEditorPlaceholder-root {
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+                left: 0;
+                right: 0;
+            }
+
+            .normal-style span {
+                text-align: center;
+                width: 100%;
+            }
+
+            .public-DraftStyleDefault-block {
+                text-align: justify;
+            }
+
+            .quote-style {
+                margin: 0 auto;
+
+                span {
+                    text-align: center;
+                }
+            }
+
+            .normal-style {
+                text-align: justify;
+            }
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+}
